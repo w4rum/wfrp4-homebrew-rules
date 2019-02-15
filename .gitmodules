@@ -1,0 +1,3 @@
+[submodule "wfrptex"]
+	path = wfrptex
+	url = https://github.com/WFRPTeX/WFRPTex

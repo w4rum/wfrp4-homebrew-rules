@@ -1,0 +1,76 @@
+\documentclass[parskip=full,11pt]{wfrp-short}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[useregional]{datetime2}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{amsmath} % for $\text{}$
+\usepackage{enumitem}
+\usepackage{hyperref}
+\setlist{nosep}
+
+\newcommand\urlpart[2]{$\underbrace{\text{\texttt{#1}}}{\text{#2}}$}
+\raggedbottom
+
+\hypersetup{
+	pdftitle={WFRP4: Homebrew Rules of "Holy Knights of Virginity"},
+}
+
+\title{WFRP4: Homebrew Rules}
+%\subtitle{Rules and Interpretations}
+\author{Holy Knights of Virginity}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty} % removed page number from title
+
+\section*{} % No section number on intro, also removes it from TOC
+\vspace{5pt}
+This is a set of homebrew rules and interpretations of ambiguous statements
+from the official material for Warhammer Fantasy Roleplay 4th Edition.
+
+This document's structure is aimed at preserving the structure of the Core
+Rulebook (CRB) and thus roughly reflects the position of the mentioned
+mechanics in the CRB.
+
+While this document is obviously based on work from Games Workshop and Cubile
+7, it is merely meant to provide clarity to our local group and other fans.
+
+Please don't sue us.
+
+\pagebreak
+\tableofcontents
+
+%%%%%%%%%%%%%%
+\pagebreak
+\section{Rules}
+
+\subsection{Stunned Condition}
+When attempting to remove a \textit{Stunned} condition with an
+\textbf{Endurance} Test, ignore all penalties inflicted by the \textit{Stunned}
+conditions themselves.
+
+E.g. a character with Endurance on 40 and 3 active \textit{Stunned} Conditions
+would still roll on \textbf{Endurance (40)}.
+Modifiers from all other sources still apply.
+
+\subsection{Critical Wounds}
+When taking a Critical Wound due to losing more Wounds than available, the
+difference is treated as \enquote{excess damage}.
+
+When determining the severity of the Critical Wound, add this modifier after
+rolling 1d100:
+\begin{itemize}
+    \item If excess damage $<$ Toughness Bonus: -20
+    \item If excess damage $\in [\text{TB}, 2*\text{TB}]$: +0
+    \item If excess damage $>$ Toughness Bonus: +20
+\end{itemize}
+
+The first case is included in the Core Rulebook.
+It's mentioning here does not \enquote{stack} with the CRB.
+
+After sustaining a Critical Wound in this manner, the character's wounds are
+set to 0, applying the \textit{Prone} Condition as mentioned in the CRB.
+
+\end{document}
