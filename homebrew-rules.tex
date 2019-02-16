@@ -2,13 +2,22 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[useregional]{datetime2}
+\usepackage{bold-extra}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{csquotes}
 \usepackage{amsmath} % for $\text{}$
 \usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{background}
+\usepackage{tabu}
+\usepackage{float}
+\usepackage{stfloats}
+\usepackage{tcolorbox}
+\usepackage[font={sc, sf, LARGE}, labelformat=empty]{caption}
 \setlist{nosep}
+
+\titlespacing{\section}{0pt}{10pt}{5pt}
 
 \newcommand\urlpart[2]{$\underbrace{\text{\texttt{#1}}}{\text{#2}}$}
 \raggedbottom
@@ -20,6 +29,16 @@
 \title{WFRP4: Homebrew Rules}
 %\subtitle{Rules and Interpretations}
 \author{Sacred Knights of Virginity}
+
+\backgroundsetup{
+scale=1,
+color=black,
+opacity=.75,
+angle=0,
+contents={%
+    \includegraphics[width=\paperwidth,height=\paperheight]{background.jpg}
+  }%
+}
 
 \begin{document}
 \maketitle
@@ -44,7 +63,17 @@ Please don't sue us.
 
 %%%%%%%%%%%%%%
 \pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Rules}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Bleeding Condition}
+In addition to Heal Tests, spells, and prayers, you may make a
+\textbf{Challenging Dexterity Test (+0)} as your Action to remove one
+\textit{Bleeding} Condition if you use a bandage.
+The bandage is only consumed on success, as failure is noticed immediately,
+allowing you to try reapplying the same bandage next round.
 
 \subsection{Stunned Condition}
 When attempting to remove a \textit{Stunned} condition with an
@@ -72,5 +101,27 @@ It's mentioning here does not \enquote{stack} with the CRB.
 
 After sustaining a Critical Wound in this manner, the character's wounds are
 set to 0, applying the \textit{Prone} Condition as mentioned in the CRB.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The\\Consumer's Guide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+All items here are either additions or modifications of already existing ones.
+Whenever there is a name conflict, the homebrew rules take precedent.
+
+\begin{figure*}[b]
+    \begin{tcolorbox}[standard jigsaw, colback=yellow!5!orange, opacityback=.25, boxrule=0pt]
+    \caption{Armour}
+    \centering
+    \begin{tabu}{c|c|c|c|c|c|c|c}
+        \rowfont{\bfseries} Armour & Price & Enc & Availability &
+            Penalty & Locations & APs & Qualities and Flaws\\
+        \hline
+        Gambeson & 12/- & 1 & Common & - & Arms, Body & 1 & -\\
+    \end{tabu}
+    \end{tcolorbox}
+\end{figure*}
+
+
 
 \end{document}
